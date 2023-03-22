@@ -1,4 +1,3 @@
-# qmlplot
+# QCustomPlot in QML
 
-This is a wrapper to QCustomPlot to render by QtQuick2.
-Implemented [solution from QCustomPlot forum](http://www.qcustomplot.com/index.php/support/forum/172).
+Original source project: <https://github.com/mosolovsa/qmlplot>. Here some changes applied (like code reformat, compile errors and warnings fixes and QCP library version update).

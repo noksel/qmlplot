@@ -1,20 +1,15 @@
-#include <QtPrintSupport/QPrinter>
-//#include <QGuiApplication>
-#include<QApplication>
-#include <QQmlApplicationEngine>
-
 #include "qmlplot.h"
+#include <QApplication>
+#include <QQmlApplicationEngine>
+#include <QtPrintSupport/QPrinter>
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-//    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-//    QGuiApplication app(argc, argv);
+int main(int argc, char *argv[]) {
+  QApplication a(argc, argv);
 
-    qmlRegisterType<CustomPlotItem>("CustomPlot", 1, 0, "CustomPlotItem");
+  qmlRegisterType<CustomPlotItem>("CustomPlot", 1, 0, "CustomPlotItem");
 
-    QQmlApplicationEngine engine;
-    engine.load(QUrl(QLatin1String("qrc:/main.qml")));
+  QQmlApplicationEngine engine;
+  engine.load(QUrl(QLatin1String("qrc:/main.qml")));
 
-    return a.exec();
+  return a.exec();
 }

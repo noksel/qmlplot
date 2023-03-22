@@ -8,25 +8,18 @@ ApplicationWindow {
     height: 480
     title: qsTr("Hello QCustomPlot in QML")
 
-//    Item {
-//        id: mainView
-//        anchors.fill: parent
-//        PlotView {
-//        }
-//    }
     SwipeView {
         id: swipeView
         anchors.fill: parent
         currentIndex: tabBar.currentIndex
         interactive: false
 
-        PlotView {
-        }
+        PlotView {}
 
         Page {
             Label {
-                text: qsTr("This is implementation of http://www.qcustomplot.com/index.php/support/forum/172\n" +
-                           "Adding random data on 500 ms tick to plot")
+                text: qsTr("This is implementation of http://www.qcustomplot.com/index.php/support/forum/172\n"
+                           + "Adding random data on 500 ms tick to plot")
                 anchors.centerIn: parent
             }
         }

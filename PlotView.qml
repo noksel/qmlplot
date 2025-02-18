@@ -12,7 +12,7 @@ Item {
     CustomPlotItem {
         id: customPlot
         anchors.fill: parent
-
+        focus: true
         Component.onCompleted: initCustomPlot()
     }
 }

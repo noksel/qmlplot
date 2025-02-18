@@ -2,7 +2,7 @@
 #define QMLPLOT_H
 
 #include <QtQuick>
-class QCustomPlot;
+class advQCstmPltt;
 class QCPAbstractPlottable;
 
 class CustomPlotItem : public QQuickPaintedItem {
@@ -19,6 +19,7 @@ public:
 protected:
   void routeMouseEvents(QMouseEvent *event);
   void routeWheelEvents(QWheelEvent *event);
+  void routeKeyEvents(QKeyEvent *event);
 
   virtual void mousePressEvent(QMouseEvent *event);
   virtual void mouseReleaseEvent(QMouseEvent *event);
@@ -26,10 +27,16 @@ protected:
   virtual void mouseDoubleClickEvent(QMouseEvent *event);
   virtual void wheelEvent(QWheelEvent *event);
 
+  virtual void keyPressEvent(QKeyEvent *event);
+  virtual void keyReleaseEvent(QKeyEvent *event);
+
+  virtual void enterEvent(QEvent *event);
+
+
   virtual void timerEvent(QTimerEvent *event);
 
 private:
-  QCustomPlot *m_CustomPlot;
+  advQCstmPltt *m_CustomPlot;
   int m_timerId;
 
 private slots:
